@@ -12,11 +12,5 @@ else:
         g=[int(x) for x in input("Enter value separated by space:").split()]
         l.append(tuple(g))
     print(l)
-    for i in l:
-        for e in l:
-            if i[-1]>e[-1]:
-                l.insert(l.index(e),i)
-                l.remove(i)
-            else:
-                l.insert(0,i)
+    l.sort(key=lambda x : x[-1])
     print(l)
